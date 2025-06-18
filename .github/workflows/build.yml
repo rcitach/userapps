@@ -29,7 +29,7 @@ on:
 
 jobs:
   build-smart-apps:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         arch:
@@ -47,9 +47,9 @@ jobs:
       - name: ⬇️ install xmake
         shell: bash
         run: |
-          sudo add-apt-repository ppa:xmake-io/xmake
-          sudo apt update
-          sudo apt install xmake
+          wget -q https://github.com/xmake-io/xmake/releases/download/v2.8.7/xmake-v2.8.7.gz.run
+          sudo chmod 777 ./xmake-v2.8.7.gz.run
+          ./xmake-v2.8.7.gz.run
 
       - name: 👷 build
         shell: bash
