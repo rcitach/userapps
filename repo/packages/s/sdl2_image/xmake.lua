@@ -87,7 +87,7 @@ do
             table.insert(configs, "--enable-shared=no")
             table.insert(configs, "--enable-static=yes")
         end
-
+        table.insert(configs, "--enable-static=yes")
         table.insert(configs, "--enable-jpg-shared=no")
         table.insert(configs, "--enable-png-shared=no")
         table.insert(configs, "--enable-tif-shared=no")

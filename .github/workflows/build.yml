@@ -53,7 +53,7 @@ jobs:
           export XMAKE_ROOT=y # Only need to use "--root" in CI
           xmake --version
           source env.sh
-          export RT_XMAKE_LINK_TYPE="static"
+
           pushd apps
             xmake f -a ${{ matrix.arch }} -vyD
             xmake -j$(nproc) -vyD
