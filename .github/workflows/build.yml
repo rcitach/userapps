@@ -45,7 +45,11 @@ jobs:
           submodules: true
 
       - name: ⬇️ install xmake
-        uses: xmake-io/github-action-setup-xmake@v1
+        shell: bash
+        run: |
+          sudo add-apt-repository ppa:xmake-io/xmake
+          sudo apt update
+          sudo apt install xmake
 
       - name: 👷 build
         shell: bash
